@@ -17,7 +17,9 @@ def main():
                 return
         log_state()
         Clock.tick(60)
+        dt = Clock.get_time() / 1000  # Delta time in seconds.
         screen.fill("black")
+        player.update(dt)
         player.draw(screen)
         pygame.display.flip()
 
